@@ -21,6 +21,7 @@ export default {
 
 <style>
 #app {
+  min-width: 280px;
   width: 100%;
   height: fit-content;
   margin: 0px 24px;
