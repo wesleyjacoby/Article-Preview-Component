@@ -1,5 +1,5 @@
 <template>
-  <div class="author-share" v-show="isShare">
+  <div class="author-share active" v-show="isShare">
     <div class="author">
       <img :src="avatar" alt="Profile Picture" class="avatar" />
       <div class="author-details">
@@ -12,7 +12,7 @@
     </div>
   </div>
 
-  <div v-show="!isShare">
+  <div v-show="!isShare" class="share-div">
     <Share @close="toggleShare" />
   </div>
 </template>
@@ -89,5 +89,35 @@ export default {
 
 .share-icon:hover {
   cursor: pointer;
+}
+
+.share-div {
+  animation: scale-up-ver-bottom 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.active {
+  animation: scale-up-ver-top 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes scale-up-ver-bottom {
+  0% {
+    transform: scaleY(0.4);
+    transform-origin: 0% 100%;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: 0% 100%;
+  }
+}
+
+@keyframes scale-up-ver-top {
+  0% {
+    transform: scaleY(0.4);
+    transform-origin: 100% 0%;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
+  }
 }
 </style>

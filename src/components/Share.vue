@@ -2,9 +2,9 @@
   <div class="main-container">
     <div class="share-icons">
       <p class="share-text">Share</p>
-      <img :src="facebook" alt="Facebook Icon" />
-      <img :src="twitter" alt="Twitter Icon" />
-      <img :src="pinterest" alt="Pinterest Icon" />
+      <img :src="facebook" alt="Facebook Icon" class="facebook" />
+      <img :src="twitter" alt="Twitter Icon" class="twitter" />
+      <img :src="pinterest" alt="Pinterest Icon" class="pinterest" />
     </div>
     <div class="share-icon" @click="toggleShareOff">
       <img :src="shareWhite" alt="Share Icon" class="icon-white" />
@@ -66,6 +66,7 @@ export default {
 
 .share-icons img:hover {
   cursor: pointer;
+  animation: bounce-bottom 0.9s both;
 }
 
 .share-icon {
@@ -85,5 +86,44 @@ export default {
 .icon-white {
   width: 15px;
   height: 15px;
+}
+
+@keyframes bounce-bottom {
+  0% {
+    transform: translateY(10px);
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(5px);
+    animation-timing-function: ease-in;
+  }
+  65% {
+    transform: translateY(3px);
+    animation-timing-function: ease-in;
+  }
+  82% {
+    transform: translateY(2px);
+    animation-timing-function: ease-in;
+  }
+  93% {
+    transform: translateY(1px);
+    animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
 }
 </style>
