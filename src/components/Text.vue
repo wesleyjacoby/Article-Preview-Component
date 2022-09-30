@@ -15,7 +15,7 @@
     </div>
 
     <div>
-      <Share @close="toggleShare" v-show="isShare" class="share-component" />
+      <Share @close="toggleShare" v-show="isShare" class="share-component"/>
     </div>
   </div>
 

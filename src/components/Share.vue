@@ -1,5 +1,8 @@
 <template>
-  <div class="share-container share-div">
+<transition mode="out-in"
+ enter-active-class="animate__animated animate__fadeIn"
+ leave-active-class="animate__animated animate__fadeOut">
+  <div class="share-container">
     <div class="share-icons">
       <p class="share-text">Share</p>
       <img :src="facebook" alt="Facebook Icon" class="facebook" />
@@ -11,6 +14,7 @@
       <img :src="shareWhite" alt="Share Icon" class="icon-white" />
     </div>
   </div>
+  </transition>
 </template>
 
 <script>
@@ -67,7 +71,7 @@ export default {
 
 .share-icons img:hover {
   cursor: pointer;
-  animation: bounce-bottom 0.9s both;
+  animation: jello-horizontal 0.9s both;
 }
 
 .share-icon {
@@ -93,57 +97,27 @@ export default {
   display: none;
 }
 
-.share-div {
-  animation: scale-up-ver-bottom 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-}
-
-@keyframes scale-up-ver-bottom {
+@keyframes jello-horizontal {
   0% {
-    transform: scaleY(0.4);
-    transform-origin: 0% 100%;
+    transform: scale3d(1, 1, 1);
   }
-  100% {
-    transform: scaleY(1);
-    transform-origin: 0% 100%;
-  }
-}
-
-@keyframes bounce-bottom {
-  0% {
-    transform: translateY(10px);
-    animation-timing-function: ease-in;
-    opacity: 1;
-  }
-  24% {
-    opacity: 1;
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
   }
   40% {
-    transform: translateY(5px);
-    animation-timing-function: ease-in;
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
   }
   65% {
-    transform: translateY(3px);
-    animation-timing-function: ease-in;
+    transform: scale3d(0.95, 1.05, 1);
   }
-  82% {
-    transform: translateY(2px);
-    animation-timing-function: ease-in;
-  }
-  93% {
-    transform: translateY(1px);
-    animation-timing-function: ease-in;
-  }
-  25%,
-  55%,
-  75%,
-  87% {
-    transform: translateY(0px);
-    animation-timing-function: ease-out;
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
   }
   100% {
-    transform: translateY(0px);
-    animation-timing-function: ease-out;
-    opacity: 1;
+    transform: scale3d(1, 1, 1);
   }
 }
 
