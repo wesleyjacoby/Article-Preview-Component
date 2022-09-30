@@ -47,22 +47,22 @@ export default {
 .container {
   position: relative;
   width: 100%;
-  padding: 36px 32px 20px 32px;
+  padding: 2.25rem 2rem 1.25rem 2rem;
 }
 
 .heading {
   font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   letter-spacing: 0.2px;
   color: var(--very-dark-gray-blue);
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 
 .main-paragraph {
-  line-height: 20px;
+  line-height: 1.25rem;
   letter-spacing: 0.13px;
-  margin-bottom: 32px;
+  margin-bottom: 2rem;
 }
 
 .share-component {
@@ -75,56 +75,56 @@ export default {
 
 @media screen and (min-width: 600px) {
   .heading {
-    font-size: 20px;
+    font-size: 1.25rem;
     letter-spacing: 0.25px;
-    line-height: 28px;
+    line-height: 1.75rem;
   }
 
   .main-paragraph {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
 
   .container {
-    padding: 32px 40px;
+    padding: 2rem 2.5rem;
   }
 
   .share-container {
-    max-width: 248px;
-    height: 55px;
-    border-radius: 10px;
+    max-width: 15.5rem;
+    height: 3.4375rem;
+    border-radius: 0.625rem;
   }
 
   .share-component {
-    bottom: 100px;
+    bottom: 6.25rem;
     margin: 0 auto;
   }
 }
 
 @media screen and (min-width: 660px) {
   .share-component {
-    left: 50px;
-    right: -20px;
+    left: 3.125rem;
+    right: -1.25rem;
   }
 }
 
 @media screen and (min-width: 760px) {
   .share-component {
-    left: 120px;
-    right: -50px;
+    left: 7.5rem;
+    right: -3.125rem;
   }
 }
 
 @media screen and (min-width: 810px) {
   .share-component {
-    left: 150px;
-    right: -80px;
+    left: 9.375rem;
+    right: -5rem;
   }
 }
 
 @media screen and (min-width: 920px) {
   .share-component {
-    left: 200px;
-    right: -80px;
+    left: 12.5rem;
+    right: -5rem;
   }
 }
 </style>

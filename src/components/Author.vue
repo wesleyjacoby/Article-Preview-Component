@@ -60,9 +60,9 @@ export default {
 .avatar {
   display: inline-block;
   border-radius: 50%;
-  width: 40px;
+  width: 2.5rem;
   height: auto;
-  margin-right: 16px;
+  margin-right: 1rem;
 }
 
 .author-details {
@@ -73,13 +73,13 @@ export default {
 
 .author-name {
   font-weight: 700;
-  line-height: 20px;
+  line-height: 1.25rem;
   letter-spacing: 0.13px;
   color: var(--very-dark-gray-blue);
 }
 
 .author-date {
-  line-height: 20px;
+  line-height: 1.25rem;
   letter-spacing: 0.13px;
   color: var(--gray-blue);
 }
@@ -88,7 +88,7 @@ export default {
   display: inline-block;
   border-radius: 50%;
   background-color: var(--light-gray-blue);
-  padding: 10px;
+  padding: 0.625rem;
 }
 
 .share-icon:hover {

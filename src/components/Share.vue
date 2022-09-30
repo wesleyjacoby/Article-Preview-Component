@@ -46,9 +46,9 @@ export default {
   justify-content: space-between;
   align-items: center;
   background-color: var(--very-dark-gray-blue);
-  padding: 18px 32px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  padding: 1.125rem 2rem;
+  border-bottom-left-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
 }
 
 .share-icons {
@@ -58,15 +58,15 @@ export default {
 }
 
 .share-text {
-  line-height: 20px;
+  line-height: 1.25rem;
   letter-spacing: 5px;
   color: var(--gray-blue);
   text-transform: uppercase;
 }
 
 .share-icons img {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .share-icons img:hover {
@@ -80,7 +80,7 @@ export default {
   align-items: center;
   border-radius: 50%;
   background-color: var(--desaturated-dark-blue);
-  padding: 10px;
+  padding: 0.625rem;
   margin-left: 56px;
 }
 
@@ -93,9 +93,13 @@ export default {
   height: 15px;
 }
 
-/* .pointer {
-  display: none;
-} */
+.animate__animated.animate__fadeIn {
+  --animate-duration: 0.5s;
+}
+
+.animate__animated.animate__fadeOut {
+  --animate-duration: 0.5s;
+}
 
 @keyframes jello-horizontal {
   0% {
@@ -127,13 +131,13 @@ export default {
   }
 
   .pointer {
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
     background-color: var(--very-dark-gray-blue);
     margin: 0 auto;
     transform: rotate(45deg);
     border-radius: 0 0 1px 0;
-    margin-top: 50px;
+    margin-top: 3.125rem;
     position: relative;
     left: calc(0.5vw - 4px);
   }
@@ -147,7 +151,7 @@ export default {
 
 @media screen and (min-width: 760px) {
   .pointer {
-    left: calc(0.5vw - 32px);
+    left: calc(0.5vw - 2rem);
   }
 }
 

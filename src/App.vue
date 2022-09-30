@@ -20,14 +20,14 @@ export default {
 
 <style>
 #app {
-  min-width: 300px;
-  max-width: 730px;
+  min-width: 18.75rem;
+  max-width: 45.625rem;
   width: 100%;
   height: fit-content;
-  margin: 0px 24px;
+  margin: 0rem 1.5rem;
   background-color: hsl(0, 0%, 100%);
-  box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
-  border-radius: 10px;
+  box-shadow: 0rem 2.5rem 2.5rem -0.625rem rgba(201, 213, 225, 0.503415);
+  border-radius: 0.625rem;
 }
 
 @media screen and (min-width: 600px) {

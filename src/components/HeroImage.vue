@@ -18,17 +18,17 @@ export default {
 
 .main-image {
   width: 100%;
-  height: 200px;
+  height: 12.5rem;
   object-fit: cover;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
 }
 
 @media screen and (min-width: 600px) {
   .main-image {
     height: 100%;
-    border-bottom-left-radius: 10px;
-    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0.625rem;
+    border-top-right-radius: 0rem;
   }
 }
 </style>
