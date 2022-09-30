@@ -10,9 +10,9 @@
       <img :src="pinterest" alt="Pinterest Icon" class="pinterest" />
     </div>
     <div class="share-icon" @click="toggleShareOff">
-      <div class="pointer"></div>
       <img :src="shareWhite" alt="Share Icon" class="icon-white" />
     </div>
+    <div class="pointer"></div>
   </div>
   </transition>
 </template>
@@ -93,9 +93,9 @@ export default {
   height: 15px;
 }
 
-.pointer {
+/* .pointer {
   display: none;
-}
+} */
 
 @keyframes jello-horizontal {
   0% {
@@ -121,15 +121,45 @@ export default {
   }
 }
 
-/* @media screen and (min-width: 600px) {
-  .share-container {
-    width: 248px;
-    height: 67px;
-    border-radius: 10px;
-  }
-
+@media screen and (min-width: 600px) {
   .share-icon {
     display: none;
   }
-} */
+
+  .pointer {
+    width: 20px;
+    height: 20px;
+    background-color: var(--very-dark-gray-blue);
+    margin: 0 auto;
+    transform: rotate(45deg);
+    border-radius: 0 0 1px 0;
+    margin-top: 50px;
+    position: relative;
+    left: calc(0.5vw - 4px);
+  }
+}
+
+@media screen and (min-width: 660px) {
+  .pointer {
+    left: calc(0.5vw - 8px);
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .pointer {
+    left: calc(0.5vw - 32px);
+  }
+}
+
+@media screen and (min-width: 810px) {
+  .pointer {
+    left: calc(0.5vw - 55px);
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .pointer {
+    left: calc(0.5vw - 82px);
+  }
+}
 </style>

@@ -15,9 +15,6 @@ export default {
 </script>
 
 <style scoped>
-/* .image-container {
-  width: 100%;
-} */
 
 .main-image {
   width: 100%;

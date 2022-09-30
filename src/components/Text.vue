@@ -87,5 +87,44 @@ export default {
   .container {
     padding: 32px 40px;
   }
+
+  .share-container {
+    max-width: 248px;
+    height: 55px;
+    border-radius: 10px;
+  }
+
+  .share-component {
+    bottom: 100px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 660px) {
+  .share-component {
+    left: 50px;
+    right: -20px;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .share-component {
+    left: 120px;
+    right: -50px;
+  }
+}
+
+@media screen and (min-width: 810px) {
+  .share-component {
+    left: 150px;
+    right: -80px;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .share-component {
+    left: 200px;
+    right: -80px;
+  }
 }
 </style>
