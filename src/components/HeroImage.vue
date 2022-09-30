@@ -14,12 +14,24 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+/* .image-container {
+  width: 100%;
+} */
+
 .main-image {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  .main-image {
+    height: 100%;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+  }
 }
 </style>

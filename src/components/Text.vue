@@ -4,21 +4,50 @@
       Shift the overall look and feel by adding these wonderful touches to
       furniture in your home
     </h1>
-    <p class="main-paragraph">
+    <p class="main-paragraph" ref="paragraph">
       Ever been in a room and felt like something was missing? Perhaps it felt
       slightly bare and uninviting. I’ve got some simple tips to help you make
       any room feel complete.
     </p>
+
+    <div>
+      <Author @open="toggleShare" />
+    </div>
+
+    <div>
+      <Share @close="toggleShare" v-show="isShare" class="share-component" />
+    </div>
   </div>
+
+
 </template>
 
 <script>
-export default {};
+import Author from "./Author.vue";
+import Share from "./Share.vue";
+
+export default {
+  data() {
+    return {
+      isShare: false,
+    };
+  },
+
+  components: { Author, Share },
+
+  methods: {
+    toggleShare() {
+      this.isShare = !this.isShare;
+    },
+  },
+};
 </script>
 
 <style>
 .container {
-  padding: 36px 32px 32px 20px;
+  position: relative;
+  width: 100%;
+  padding: 36px 32px 20px 32px;
 }
 
 .heading {
@@ -33,5 +62,30 @@ export default {};
 .main-paragraph {
   line-height: 20px;
   letter-spacing: 0.13px;
+  margin-bottom: 32px;
+}
+
+.share-component {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+@media screen and (min-width: 600px) {
+  .heading {
+    font-size: 20px;
+    letter-spacing: 0.25px;
+    line-height: 28px;
+  }
+
+  .main-paragraph {
+    margin-bottom: 20px;
+  }
+
+  .container {
+    padding: 32px 40px;
+  }
 }
 </style>
